@@ -1,0 +1,264 @@
+/* colors */
+.oxfordblue {
+    background-color: #A499B3;
+}
+.charcoal {
+    background-color: #465362;
+}
+.cambridgeblue {
+    background-color: #82a3a1;
+}
+.carolinablue {
+    background-color: #74B1D2;
+}
+.olivine {
+    background-color: #9fc490;
+}
+.teagreen {
+    background-color: #c0dfa1;
+}
+/* transitions */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideintop {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideinbottom {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* dividers */
+.divider1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 141px;
+}
+
+.divider1 .shape-fill {
+    fill: #ffffff;
+}
+
+.divider2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 178px;
+}
+
+.divider2 .shape-fill {
+    fill: #74B1D2;
+}
+
+.divider3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 248px;
+}
+
+.divider3 .shape-fill {
+    fill: #9fc490;
+}
+
+.divider4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider4 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 158px;
+}
+
+.divider4 .shape-fill {
+    fill: #82A3A1;
+}
+
+/* rest of code */
+body {
+    margin: 0;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: column;
+    min-height: 800px;
+}
+
+.intro {
+    min-height: 1000px;
+}
+
+#name {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 140px;
+    margin-top: 275px;
+    margin-bottom: 5px;
+    animation-name: fadein, slideintop;
+    animation-duration: 0.4s, 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+#label {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation-name: fadein, slideintop; 
+    animation-duration: 0.5s, 0.6s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+.media {
+    margin-top: -170px;
+    display: flex;
+    justify-content: center;
+}
+
+.media img {
+    width: 300px;
+    padding: 25px;
+}
+
+.medias:hover {
+    transform: scale(1.15);
+}
+
+#photo1 {
+    align-content: right;
+    width: 300px;
+}
+
+.card {
+    width: 90%;
+    transform: translateX(30px);
+    opacity: 0;
+    transition: 350ms;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.card.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlap";
+}
+
+.aboutme {
+    font-size: 300px;
+    grid-area: overlap;
+    margin-left: 7%;
+}
+
+.aboutme.show {
+    opacity: .08;
+}
+
+.introduction{
+    font-size: 40px;
+    grid-area: overlap; 
+    justify-self: center;
+    align-self: center;
+}
+
+.programmingprojects {
+    font-size: 300px;
+    margin-top: 15%;
+    margin-left: 7%;
+    margin-bottom: 10%;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -2%;
+    margin-bottom: 15%;
+}
+
+.card2 {
+    width: 350px;
+    height: 350px;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.academicaccolades {
+    margin-top: 20%;
+    font-size: 150px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.last{
+    text-align: center;
+    font-size: 80px;
+    font-family: "Poppins", sans-serif;
+    margin-top: -8%;
+    margin-bottom: 20%
+}
